@@ -6,8 +6,9 @@ async function main() {
   try {
     const result = await prisma.user.create({
       data: {
-        name: "Subahan Islam",
+        name: "subahan",
         email: "subahanislam523@gmail.com",
+        profilePhoto:"https://ibb.co.com/xK4gS5s4"
       },
     });
     console.log(" User created successfully:", result);
