@@ -71,7 +71,7 @@ async function main() {
     //   },
     // })
     // console.log(" Deleted user data:", deleteUser);
-    console.log(await prisma.user.findMany());
+    // console.log(await prisma.user.findMany());
   } catch (error) {
     console.error(" Error details:", error);
   } finally {
