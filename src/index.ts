@@ -42,16 +42,36 @@ async function main() {
     // console.log(" Updated user data:", updateUserData);
     // const userallData = await prisma.user.findMany();
     // console.log(" All user data:", userallData);
-    const updateManyUserData = await prisma.user.updateMany({
-      where: {
-        profilePhoto: null
-      },
-      data: {
-        profilePhoto: "https://example.com/default-profile-photo.jpg"
-      }
-    });
-    console.log(" Updated many user data:", updateManyUserData);
+    // const updateManyUserData = await prisma.user.updateMany({
+    //   where: {
+    //     profilePhoto: null
+    //   },
+    //   data: {
+    //     profilePhoto: "https://example.com/default-profile-photo.jpg"
+    //   }
+    // });
 
+    // const updateManyUserData = await prisma.user.updateManyAndReturn({
+    //   where: {
+    //     id: {
+    //       gt: 2
+    //     }
+    //   },
+    //   data: {
+    //     profilePhoto: "https://example.com/default-profile-photo.jpg"
+    //   }
+    // })
+    // console.log(" Updated many user data:", updateManyUserData);
+
+
+    // delete user data
+    // const deleteUser = await prisma.user.delete ({
+    //   where :{
+    //     id:3
+    //   },
+    // })
+    // console.log(" Deleted user data:", deleteUser);
+    console.log(await prisma.user.findMany());
   } catch (error) {
     console.error(" Error details:", error);
   } finally {

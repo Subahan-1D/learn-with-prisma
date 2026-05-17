@@ -8,3 +8,8 @@
 - findMany - array and object
 - findUnique - one sigle data dicce
 - findFirstOrThrow - return single object if exits , other wise throw error
+-update
+-updateMany
+-updateManyandReturn
+-delete
+-deleteMany
