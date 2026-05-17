@@ -6,9 +6,8 @@ async function main() {
   try {
     // const result = await prisma.user.create({
     //   data: {
-    //     name: "subahan",
-    //     email: "subahanislam523@gmail.com",
-    //     profilePhoto:"https://ibb.co.com/xK4gS5s4"
+    //     name: "subahan ali",
+    //     email: "subahanislami@gmail.com",
     //   },
     // });
     // const userData = await prisma.user.findMany({
@@ -41,8 +40,17 @@ async function main() {
     //   }
     // })
     // console.log(" Updated user data:", updateUserData);
-    const userallData = await prisma.user.findMany();
-    console.log(" All user data:", userallData);
+    // const userallData = await prisma.user.findMany();
+    // console.log(" All user data:", userallData);
+    const updateManyUserData = await prisma.user.updateMany({
+      where: {
+        profilePhoto: null
+      },
+      data: {
+        profilePhoto: "https://example.com/default-profile-photo.jpg"
+      }
+    });
+    console.log(" Updated many user data:", updateManyUserData);
 
   } catch (error) {
     console.error(" Error details:", error);
