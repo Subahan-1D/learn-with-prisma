@@ -218,8 +218,15 @@ async function others() {
     // retrieve all data
 
     const retrieveUserData = await prisma.user.findMany({
+        where:{
+            name :{
+                contains : "sh", // case sensitive
+                mode :"insensitive" // case insensitive
+
+            }
+        },
         orderBy: {
-            id: "desc"
+            id: "asc"
         }
     })
     console.log(" Retrieved user data:", retrieveUserData);
